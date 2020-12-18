@@ -62,27 +62,22 @@ export default class CreatePosts extends Component {
 
 
 
-    //Adding user to mongoDb database when pressing submit
+    //Adding post to mongoDb database when pressing submit
     onSubmit(e) {
         e.preventDefault();
-
-        
-
         const post = {
             username: this.state.username,
             content: this.state.content
         }
         this.state.users.forEach(element => {
             if (element.password ===  this.state.password && element.username === this.state.username){
-                alert('A post was added: ');
                 console.log(post);
                 
                 axios.post('http://localhost:5000/posts/add', post)
                 .then(res => console.log(res.data));
-
                 window.location = '/';
             } else {
-                console.log('Password did not match the one in database')
+                console.log('The post was unable to be added');
             }
         })
 
@@ -131,7 +126,8 @@ export default class CreatePosts extends Component {
                         </div>
                         <div className="form-group">
                             <label>
-                                <strong>Content:</strong> 
+                                <strong>Content: </strong>
+                                <weak>(Max 300 characters)</weak>
                             </label>
                             <textarea type="text"
                             rows="3"

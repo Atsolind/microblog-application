@@ -58,7 +58,8 @@ export default class CreateUser extends Component {
                     <form onSubmit={this.onSubmit}>
                         <div className="form-group">
                             <label>
-                                <strong>Username:</strong> 
+                                <strong>Username: </strong>
+                                <weak>(Max 25 characters)</weak> 
                             </label>
                             <input type="text"
                             required
@@ -69,7 +70,8 @@ export default class CreateUser extends Component {
                         </div>
                         <div className="form-group">
                             <label>
-                                <strong>Password:</strong> 
+                                <strong>Password: </strong>
+                                <weak>(Max 25 characters)</weak> 
                             </label>
                             <input type="text"
                             required
