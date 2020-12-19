@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; //Allows to link to different routes
 
+//Class navbar renders a navigation bar with help of bootstrap
+//and links the user to a certain component via the navigationbar
 export default class Navbar extends Component {
     
     render() {
@@ -26,4 +28,3 @@ export default class Navbar extends Component {
     };
 
 };
-

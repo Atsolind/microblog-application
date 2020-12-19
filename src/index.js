@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App'; //here we will create the fronted react app
+import App from './App'; //Here the frontend react app is created
 
 
 ReactDOM.render(
@@ -8,6 +8,6 @@ ReactDOM.render(
     <App />
   </React.StrictMode>,
   document.getElementById('root')
-); //app will render here
+); //ReactDom renders the app in the root in the index.html
 
 
