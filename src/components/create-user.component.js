@@ -43,7 +43,6 @@ export default class CreateUser extends Component {
             password: this.state.password
         }
         //Alerts when a user is created
-        alert('A user was created: ' + this.state.username);
         console.log(user);
 
         //Post request gets the route from the users route file and saves a user to the database
